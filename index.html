@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vid8 | An advanced HTML5 video player.</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="./css/video.css" type="text/css">
+</head>
+<body>
+
+
+<div id="video-player" class="video-player" style="width: 1000px;">
+    <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
+        <p>HTML5 Video element not supported.</p>
+    </video>
+
+    <div class="video-overlays">
+        <div class="video-overlay" data-timestamp="175">
+            <h1>Example message</h1>
+            <p>Question a: </p>
+            <p>What is the name of the bunny in the first part of the video.</p>
+
+            <br>
+            <button>John</button>
+            <button>Buck</button>
+            <button class="video-close-overlay">Close</button>
+        </div>
+
+        <div class="video-overlay" data-timestamp="15">
+            <h1>A timestamp after 15s</h1>
+            <button class="video-close-overlay">Close</button>
+        </div>
+
+        <div class="video-overlay" data-timestamp="10">
+            <h1>A timestamp after 10s</h1>
+            <button class="video-close-overlay">Close</button>
+        </div>
+    </div>
+
+    <input type="range" class="video-progress-bar" value="0">
+
+    <div class="video-bookmarks"></div>
+
+    <div class="video-controls">
+        <div class="left-controls">
+            <button class="play-pause">
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i>
+            </button>
+
+            <button class="next"><i class="fas fa-step-forward"></i></button>
+            <button class="volume"><i class="fas fa-volume-up"></i></button>
+            <button class="current-time">(0:00 / 9:54)</button>
+        </div>
+        <div class="right-controls">
+            <button class="bookmark"><i class="fas fa-bookmark"></i></button>
+            <button class="cc"><i class="far fa-closed-captioning"></i></button>
+            <button class="settings"><i class="fas fa-cog"></i></button>
+            <button class="full-screen"><i class="fas fa-expand-alt"></i></button>
+        </div>
+    </div>
+</div>
+
+
+<script type="module" src="./js/index.js"></script>
+</body>
+</html>
